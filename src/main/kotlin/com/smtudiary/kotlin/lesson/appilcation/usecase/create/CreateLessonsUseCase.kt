@@ -1,4 +1,4 @@
-package com.smtudiary.kotlin.lesson.infrastructure.appilcation.usecase.create
+package com.smtudiary.kotlin.lesson.appilcation.usecase.create
 
 import com.smtudiary.kotlin.lesson.domain.model.Lesson
 import com.smtudiary.kotlin.lesson.domain.repository.LessonRepository

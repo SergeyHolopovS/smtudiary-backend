@@ -1,11 +1,11 @@
 package com.smtudiary.kotlin.lesson.infrastructure.web
 
 import com.smtudiary.kotlin.lesson.domain.model.Lesson
-import com.smtudiary.kotlin.lesson.infrastructure.appilcation.usecase.create.CreateLessonCommand
-import com.smtudiary.kotlin.lesson.infrastructure.appilcation.usecase.create.CreateLessonsCommand
-import com.smtudiary.kotlin.lesson.infrastructure.appilcation.usecase.create.CreateLessonsUseCase
-import com.smtudiary.kotlin.lesson.infrastructure.appilcation.usecase.getByGroup.GetLessonsByGroupCommand
-import com.smtudiary.kotlin.lesson.infrastructure.appilcation.usecase.getByGroup.GetLessonsByGroupUseCase
+import com.smtudiary.kotlin.lesson.appilcation.usecase.create.CreateLessonCommand
+import com.smtudiary.kotlin.lesson.appilcation.usecase.create.CreateLessonsCommand
+import com.smtudiary.kotlin.lesson.appilcation.usecase.create.CreateLessonsUseCase
+import com.smtudiary.kotlin.lesson.appilcation.usecase.getByGroup.GetLessonsByGroupCommand
+import com.smtudiary.kotlin.lesson.appilcation.usecase.getByGroup.GetLessonsByGroupUseCase
 import com.smtudiary.kotlin.lesson.infrastructure.mappers.toResponse
 import com.smtudiary.kotlin.lesson.infrastructure.web.dto.request.CreateLessonsRequest
 import com.smtudiary.kotlin.lesson.infrastructure.web.dto.response.LessonResponse

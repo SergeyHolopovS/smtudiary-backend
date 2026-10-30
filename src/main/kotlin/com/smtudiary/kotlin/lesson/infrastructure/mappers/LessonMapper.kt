@@ -1,7 +1,7 @@
 package com.smtudiary.kotlin.lesson.infrastructure.mappers
 
 import com.smtudiary.kotlin.lesson.domain.model.Lesson
-import com.smtudiary.kotlin.lesson.infrastructure.appilcation.usecase.create.CreateLessonCommand
+import com.smtudiary.kotlin.lesson.appilcation.usecase.create.CreateLessonCommand
 import com.smtudiary.kotlin.lesson.infrastructure.persistence.entity.LessonJpaEntity
 import com.smtudiary.kotlin.lesson.infrastructure.web.dto.response.LessonResponse
 
