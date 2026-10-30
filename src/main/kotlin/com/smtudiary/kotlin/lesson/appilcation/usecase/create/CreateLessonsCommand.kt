@@ -8,7 +8,7 @@ data class CreateLessonCommand(
     val teacher : String?,
     val week: WeekType,
     val room : String,
-    val group : String,
+    val group : Int,
     val day: String,
 )
 

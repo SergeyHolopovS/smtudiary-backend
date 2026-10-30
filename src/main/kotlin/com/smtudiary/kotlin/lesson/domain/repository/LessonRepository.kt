@@ -6,7 +6,7 @@ interface LessonRepository {
 
     fun saveAll(lessons: List<Lesson>): List<Lesson>
 
-    fun findByGroup(group: String): List<Lesson>
+    fun findByGroup(group: Int): List<Lesson>
 
     fun clearDb()
 

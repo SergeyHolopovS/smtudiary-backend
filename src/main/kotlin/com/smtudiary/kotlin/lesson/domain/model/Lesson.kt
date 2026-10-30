@@ -1,5 +1,6 @@
 package com.smtudiary.kotlin.lesson.domain.model
 
+import com.smtudiary.kotlin.group.domain.model.Group
 import java.util.UUID
 
 data class Lesson(
@@ -9,6 +10,6 @@ data class Lesson(
     val teacher : String?,
     val week: WeekType,
     val room : String,
-    val group : String,
+    val group : Group,
     val day: String,
 )

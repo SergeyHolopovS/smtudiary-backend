@@ -1,12 +1,16 @@
 package com.smtudiary.kotlin.lesson.infrastructure.persistence.entity
 
+import com.smtudiary.kotlin.group.infrastructure.persistence.entity.GroupJpaEntity
 import com.smtudiary.kotlin.lesson.domain.model.Lesson
 import com.smtudiary.kotlin.lesson.domain.model.WeekType
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
+import jakarta.persistence.FetchType
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
+import jakarta.persistence.JoinColumn
+import jakarta.persistence.ManyToOne
 import jakarta.persistence.Table
 import java.io.Serializable
 import java.util.UUID
@@ -23,36 +27,23 @@ data class LessonJpaEntity (
     @Column(name = "name", length = 255)
     val name : String?,
 
-    @Column(name = "title", length = 64)
+    @Column(name = "time", length = 64)
     val time : String,
 
     @Column(name = "teacher", length = 128)
     val teacher : String?,
 
-    @Column(name = "type", length = 64)
+    @Column(name = "week")
     val week: WeekType,
 
     @Column(name = "room", length = 64)
     val room : String,
 
-    @Column(name = "`group`", length = 16)
-    val group : String,
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
+    @JoinColumn(name = "`group`", referencedColumnName = "`group`", nullable = false)
+    val group : GroupJpaEntity,
 
     @Column(name = "day")
     val day: String,
 
-) : Serializable {
-
-    fun toModel(): Lesson
-        = Lesson(
-            id = this.id,
-            name = this.name,
-            time = this.time,
-            teacher = this.teacher,
-            room = this.room,
-            group = this.group,
-            week = this.week,
-            day = this.day
-        )
-
-}
+) : Serializable

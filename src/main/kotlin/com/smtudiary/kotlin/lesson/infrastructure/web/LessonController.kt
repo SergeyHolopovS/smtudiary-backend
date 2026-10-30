@@ -54,7 +54,7 @@ class LessonController(
     }
 
     @GetMapping("/{group}")
-    fun getByGroup(@PathVariable("group") group: String): ResponseEntity<List<LessonResponse>> {
+    fun getByGroup(@PathVariable("group") group: Int): ResponseEntity<List<LessonResponse>> {
         val result = getLessonsByGroup.execute(
             command = GetLessonsByGroupCommand(
                 group = group

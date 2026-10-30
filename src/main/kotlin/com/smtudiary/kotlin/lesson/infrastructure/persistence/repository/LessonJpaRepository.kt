@@ -8,6 +8,6 @@ import java.util.UUID
 interface LessonJpaRepository: JpaRepository<LessonJpaEntity, UUID> {
 
     @Cacheable(cacheNames = ["lessons"], key = "#group")
-    fun findByGroup(group: String): List<LessonJpaEntity>
+    fun findByGroupGroup(group: Int): List<LessonJpaEntity>
 
 }
